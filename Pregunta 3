@@ -1,0 +1,22 @@
+from time import time
+
+
+def funcionA(funcionB):
+    def funcionC(*args, **kwargs):
+        start_time = time()
+        elapsed_time = time() - start_time
+        print("El tiempo de ejecución fue de: {} segundos".format(elapsed_time))
+        resultado = funcionB(*args, **kwargs)
+        print("La función decoradora terminó de ejecutarse correctamente\n")
+        return resultado
+    return funcionC
+
+
+@funcionA
+def dividir(a, b):
+    print(a/b)
+
+
+dividir(3, 7)
+dividir(405, 7)
+dividir(374833456789067890, 27345678904)
