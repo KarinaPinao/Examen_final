@@ -1,0 +1,13 @@
+import random
+
+
+def guardar_num_aleatorios():
+    print("Usted creará una lista con números aleatorios")
+    tamano = int(input("Defina cuántos elementos quiere que tenga su lista: "))
+    num_aleatorios = [random.randint(0, 100) for x in range(tamano)]
+    lista = list(num_aleatorios)
+    print("Los números aleatorios generados dentro del rango ingresado son: {}".format(lista))
+    file_name = "notas.txt"
+    f = open(file_name, "a+")
+    f.write(str(lista) + "\n")
+    f.close()
