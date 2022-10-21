@@ -1,0 +1,3 @@
+import operaciones
+
+operaciones.guardar_num_aleatorios()
