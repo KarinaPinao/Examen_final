@@ -1,1 +1,35 @@
+import random
+
+numeros = []
+norepetidos = []
+
+
+def generar_aleatorios():
+
+    while len(numeros) < 10:
+        num_aleatorio = random.randint(0, 100)
+        numeros.append(num_aleatorio)
+    return print("Se generó la siguiente lista de 10 números aleatorios: {}".format(numeros))
+
+
+def no_repetidos():
+    diferentes = set(numeros)
+    norepetidos.append(diferentes)
+    return print("Los números no repetidos son: {}".format(norepetidos))
+
+
+def ordenar():
+    ordenada = sorted(set(numeros))
+    print("La misma lista, esta vez ordenada, es: {}".format(ordenada))
+
+
+def maxim():
+    maximo = max([int(num) for num in set(numeros)])
+    print("El mayor número obtenido es: {}".format(maximo))
+
+
+generar_aleatorios()
+no_repetidos()
+ordenar()
+maxim()
 
